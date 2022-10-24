@@ -1,0 +1,99 @@
+#index__section__one{
+    @include center-flex();
+    background-color: black;
+    #encabezado__section__one{
+        div{
+            .txt__dorado{
+                @include center-flex();
+                width: 200px;
+                height: 200px;
+                h1{
+                    font-family: $txt-titulos;
+                    font-size: 140%;
+                    color: $c-hover-header;
+                }
+            }
+
+            .img__dorado{
+                @include center-flex();
+                width: 200px;
+                height: 200px;
+                img{
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+    .textos__section__one{
+        div{
+
+            .img__section__one{
+                width: 100%;
+                height: 550px;
+                padding: 0px 0px 0px 0px;
+                @include bordes-dorados();
+                border-radius: 5px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            div{
+                @include center-flex();
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 100%;
+                height: 440px;
+                @include bordes-dorados();
+                border-radius: 5px;
+                padding: 50px 50px 50px 50px;
+
+                h2{
+                    font-family: $txt-textos;
+                    font-size: 130%;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #index__section__one{
+        .textos__section__one{
+            div{
+                div{
+                    h2{
+                        font-size: 100%;
+                    }   
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: 576px) {
+    #index__section__one{
+        .textos__section__one{
+            div{
+                @include center-flex();
+
+                .img__section__one{
+                    width: 80%;
+                }
+
+                div{
+                    width: 80%;
+                    padding: 10px 10px 10px 10px;
+
+                    h2{
+                        font-size: 12px;
+                    }   
+                }
+            }
+        }
+    }    
+}

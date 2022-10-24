@@ -1,0 +1,81 @@
+.footer__index{
+    width: 100%;
+    height: 280px;
+    background-color: darken($c-hover-header , 12%);
+    @include center-flex();
+
+    .img__center{
+        @include center-flex();
+
+        img{
+            margin: 0px 20px 20px 20px;
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .logos__redes{
+        div{
+            div{
+                a{
+                    svg{
+                        width: 80px;
+                        height: 80px;
+                        cursor: pointer;
+                        &:hover{
+                            path{
+                                fill: black;
+                            }
+                        }
+    
+                        path{
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer pages //
+
+.footer__pages{
+    width: 100%;
+    height: 280px;
+    background-color: $c-principal;
+    @include center-flex();
+
+    .img__center{
+        @include center-flex();
+
+        img{
+            margin: 0px 20px 20px 20px;
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .logos__redes{
+        div{
+            div{
+                a{
+                    svg{
+                        width: 80px;
+                        height: 80px;
+                        cursor: pointer;
+                        &:hover{
+                            path{
+                                fill: black;
+                            }
+                        }
+    
+                        path{
+                            fill: $c-hover-header;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

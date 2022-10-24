@@ -1,0 +1,360 @@
+.header__index{
+    width: 100%;
+    height: 100vh;
+    background-image:
+    linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)),
+    url(../images/bg-header-index.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+
+    nav{
+        width: 90%;
+        height: 80px;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "logo-afa   nav-a"
+        ;
+        border-bottom: solid 1px white;
+
+        #nav__img{
+            grid-area: logo-afa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 65px;
+                height: 65px;
+                
+            }
+        }
+        #nav__a{
+            grid-area: nav-a;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            a{
+                text-decoration: none;
+                font-family: $txt-titulos;
+                font-size: 150%;
+                color: white;
+
+                &:hover{
+                    color: $c-hover-header;
+                }
+            }
+        }
+    }
+}
+
+.btn-menu label{
+    grid-area: btn-menu;
+    position: relative;
+    display: none;
+    
+    svg{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &:hover{
+            path{
+                fill: $c-hover-header;
+            }
+        }
+        path{
+            fill: white;
+        }
+    }
+}
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: $c-principal;
+    height: 100vh;
+    position: fixed;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    font-family: $txt-titulos;
+    font-size: 120%;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+
+    &:hover{
+        color: $c-hover-header;
+    }
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+    svg{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:hover{
+            path{
+                fill: $c-hover-header;
+            }
+        }
+        path{
+            fill: black;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .header__index{
+        background-image:
+        linear-gradient(rgba(5, 7, 12, 0.50), rgba(5, 7, 12, 0.50)),
+        url(../images/bg-header-indexmb.jpg);
+        nav{
+            width: 90%;
+            height: 80px;
+            display: grid;
+            grid-template-columns: 20% 60%;
+            grid-template-areas: 
+            "btn-menu   logo-afa"
+            ;
+            border-bottom: solid 1px white;
+            align-items: center;
+    
+            #nav__img{
+                grid-area: logo-afa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img{
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+            #nav__a{
+                display: none;
+            }
+        }
+    }
+
+    .btn-menu label{
+        display: block;
+    }
+    .container-menu{
+        display: block;
+    }
+}
+
+// Header--pages //
+
+.header__pages{
+    width: 100%;
+    height: 60px;
+    background-color: $c-principal;
+    @include center-flex();
+
+    nav{
+        width: 100%;
+        height: 40px;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: 
+        "logo-afa   nav-a"
+        ;
+
+        #nav__img{
+            grid-area: logo-afa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 40px;
+                height: 40px;
+                
+            }
+        }
+        #nav__a{
+            grid-area: nav-a;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            a{
+                text-decoration: none;
+                font-family: $txt-titulos;
+                font-size: 150%;
+                color: $c-hover-header;
+
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.btn-menu-pages label{
+    grid-area: btn-menu;
+    position: relative;
+    display: none;
+    
+    svg{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &:hover{
+            path{
+                fill: black;
+            }
+        }
+        path{
+            fill: $c-hover-header;
+        }
+    }
+}
+#btn-menu-pages{
+    display: none;
+}
+.container-menu-pages{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+#btn-menu-pages:checked ~ .container-menu-pages{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu-pages{
+    width: 100%;
+    max-width: 250px;
+    background: $c-principal;
+    height: 100vh;
+    position: fixed;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu-pages:checked ~ .container-menu-pages .cont-menu-pages{
+    transform: translateX(0%);
+}
+.cont-menu-pages nav{
+    transform: translateY(15%);
+}
+.cont-menu-pages nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: $c-hover-header;
+    font-family: $txt-titulos;
+    font-size: 120%;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+
+    &:hover{
+        color: black;
+    }
+}
+
+.cont-menu-pages label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+    svg{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        &:hover{
+            path{
+                fill: black;
+            }
+        }
+        path{
+            fill: $c-hover-header;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .header__pages{
+        background-color: $c-principal;
+        height: 60px;
+
+        nav{
+            width: 100%;
+            height: 70px;
+            display: grid;
+            grid-template-columns: 20% 60%;
+            grid-template-areas: 
+            "btn-menu   logo-afa"
+            ;
+            align-items: center;
+    
+            #nav__img{
+                grid-area: logo-afa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+            #nav__a{
+                display: none;
+            }
+        }
+    }
+
+    .btn-menu-pages label{
+        display: block;
+    }
+    .container-menu-pages {
+        display: block;
+    }
+}

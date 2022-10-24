@@ -1,0 +1,974 @@
+.header__index {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../images/bg-header-index.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.header__index nav {
+  width: 90%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "logo-afa   nav-a";
+  border-bottom: solid 1px white;
+}
+.header__index nav #nav__img {
+  grid-area: logo-afa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__index nav #nav__img img {
+  width: 65px;
+  height: 65px;
+}
+.header__index nav #nav__a {
+  grid-area: nav-a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__index nav #nav__a a {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150%;
+  color: white;
+}
+.header__index nav #nav__a a:hover {
+  color: #D2A353;
+}
+
+.btn-menu label {
+  grid-area: btn-menu;
+  position: relative;
+  display: none;
+}
+.btn-menu label svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.btn-menu label svg:hover path {
+  fill: #D2A353;
+}
+.btn-menu label svg path {
+  fill: white;
+}
+
+#btn-menu {
+  display: none;
+}
+
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: white;
+  height: 100vh;
+  position: fixed;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+
+.cont-menu nav {
+  transform: translateY(15%);
+}
+
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 120%;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+  color: #D2A353;
+}
+
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+}
+.cont-menu label svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.cont-menu label svg:hover path {
+  fill: #D2A353;
+}
+.cont-menu label svg path {
+  fill: black;
+}
+
+@media screen and (max-width: 991px) {
+  .header__index {
+    background-image: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url(../images/bg-header-indexmb.jpg);
+  }
+  .header__index nav {
+    width: 90%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-template-areas: "btn-menu   logo-afa";
+    border-bottom: solid 1px white;
+    align-items: center;
+  }
+  .header__index nav #nav__img {
+    grid-area: logo-afa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__index nav #nav__img img {
+    width: 65px;
+    height: 65px;
+  }
+  .header__index nav #nav__a {
+    display: none;
+  }
+  .btn-menu label {
+    display: block;
+  }
+  .container-menu {
+    display: block;
+  }
+}
+.header__pages {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__pages nav {
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "logo-afa   nav-a";
+}
+.header__pages nav #nav__img {
+  grid-area: logo-afa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__pages nav #nav__img img {
+  width: 40px;
+  height: 40px;
+}
+.header__pages nav #nav__a {
+  grid-area: nav-a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__pages nav #nav__a a {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 150%;
+  color: #D2A353;
+}
+.header__pages nav #nav__a a:hover {
+  color: black;
+}
+
+.btn-menu-pages label {
+  grid-area: btn-menu;
+  position: relative;
+  display: none;
+}
+.btn-menu-pages label svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.btn-menu-pages label svg:hover path {
+  fill: black;
+}
+.btn-menu-pages label svg path {
+  fill: #D2A353;
+}
+
+#btn-menu-pages {
+  display: none;
+}
+
+.container-menu-pages {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+#btn-menu-pages:checked ~ .container-menu-pages {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu-pages {
+  width: 100%;
+  max-width: 250px;
+  background: white;
+  height: 100vh;
+  position: fixed;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+#btn-menu-pages:checked ~ .container-menu-pages .cont-menu-pages {
+  transform: translateX(0%);
+}
+
+.cont-menu-pages nav {
+  transform: translateY(15%);
+}
+
+.cont-menu-pages nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #D2A353;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 120%;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu-pages nav a:hover {
+  color: black;
+}
+
+.cont-menu-pages label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  cursor: pointer;
+}
+.cont-menu-pages label svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.cont-menu-pages label svg:hover path {
+  fill: black;
+}
+.cont-menu-pages label svg path {
+  fill: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .header__pages {
+    background-color: white;
+    height: 60px;
+  }
+  .header__pages nav {
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    grid-template-areas: "btn-menu   logo-afa";
+    align-items: center;
+  }
+  .header__pages nav #nav__img {
+    grid-area: logo-afa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__pages nav #nav__img img {
+    width: 45px;
+    height: 45px;
+  }
+  .header__pages nav #nav__a {
+    display: none;
+  }
+  .btn-menu-pages label {
+    display: block;
+  }
+  .container-menu-pages {
+    display: block;
+  }
+}
+#index__section__one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+#index__section__one #encabezado__section__one div .txt__dorado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+#index__section__one #encabezado__section__one div .txt__dorado h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 140%;
+  color: #D2A353;
+}
+#index__section__one #encabezado__section__one div .img__dorado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+#index__section__one #encabezado__section__one div .img__dorado img {
+  width: 120px;
+  height: 120px;
+}
+#index__section__one .textos__section__one div .img__section__one {
+  width: 100%;
+  height: 550px;
+  padding: 0px 0px 0px 0px;
+  border-top: solid 4px #D2A353;
+  border-bottom: solid 4px #D2A353;
+  border-left: solid 4px #D2A353;
+  border-right: solid 4px #D2A353;
+  border-radius: 5px;
+}
+#index__section__one .textos__section__one div .img__section__one img {
+  width: 100%;
+  height: 100%;
+}
+#index__section__one .textos__section__one div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 440px;
+  border-top: solid 4px #D2A353;
+  border-bottom: solid 4px #D2A353;
+  border-left: solid 4px #D2A353;
+  border-right: solid 4px #D2A353;
+  border-radius: 5px;
+  padding: 50px 50px 50px 50px;
+}
+#index__section__one .textos__section__one div div h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 130%;
+  color: white;
+}
+
+@media screen and (max-width: 991px) {
+  #index__section__one .textos__section__one div div h2 {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  #index__section__one .textos__section__one div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #index__section__one .textos__section__one div .img__section__one {
+    width: 80%;
+  }
+  #index__section__one .textos__section__one div div {
+    width: 80%;
+    padding: 10px 10px 10px 10px;
+  }
+  #index__section__one .textos__section__one div div h2 {
+    font-size: 12px;
+  }
+}
+.footer__index {
+  width: 100%;
+  height: 280px;
+  background-color: #b88630;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__index .img__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__index .img__center img {
+  margin: 0px 20px 20px 20px;
+  width: 130px;
+  height: 130px;
+}
+.footer__index .logos__redes div div a svg {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.footer__index .logos__redes div div a svg:hover path {
+  fill: black;
+}
+.footer__index .logos__redes div div a svg path {
+  fill: white;
+}
+
+.footer__pages {
+  width: 100%;
+  height: 280px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__pages .img__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__pages .img__center img {
+  margin: 0px 20px 20px 20px;
+  width: 130px;
+  height: 130px;
+}
+.footer__pages .logos__redes div div a svg {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.footer__pages .logos__redes div div a svg:hover path {
+  fill: black;
+}
+.footer__pages .logos__redes div div a svg path {
+  fill: #D2A353;
+}
+
+.bg__titulos {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-titulos.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__titulos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__titulos div h1 {
+  font-size: 600%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .bg__titulos {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-titulosmb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__titulos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__titulos div h1 {
+    font-size: 600%;
+    font-family: "Josefin Sans", sans-serif;
+    color: #D2A353;
+  }
+}
+#section__titulos {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../images/fondo-afa.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#section__titulos div div div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#section__titulos div div div div {
+  margin: 10px 10px 10px 10px;
+}
+#section__titulos div div div div img {
+  width: 100%;
+  height: 200px;
+}
+#section__titulos div div div div div p {
+  color: #D2A353;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+  #section__titulos {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../images/fondo-afa.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #section__titulos div div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section__titulos div div div div {
+    margin: 10px 10px 10px 10px;
+  }
+  #section__titulos div div div div img {
+    width: 100%;
+    height: 200px;
+  }
+  #section__titulos div div div div div p {
+    color: #D2A353;
+    font-family: "Josefin Sans", sans-serif;
+  }
+}
+.bg__noticias {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-noticias.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__noticias div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__noticias div h1 {
+  font-size: 600%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .bg__noticias {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-noticiasmb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__noticias div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__noticias div h1 {
+    font-size: 600%;
+    font-family: "Josefin Sans", sans-serif;
+    color: #D2A353;
+  }
+}
+.bg__jugadores {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-jugadores.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__jugadores div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__jugadores div h1 {
+  font-size: 600%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .bg__jugadores {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-jugadoresmb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__jugadores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__jugadores div h1 {
+    font-size: 600%;
+    font-family: "Josefin Sans", sans-serif;
+    color: #D2A353;
+  }
+}
+#section__jugadores {
+  width: 100%;
+  height: 1060px;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/fondo-afa.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#section__jugadores div {
+  padding: 20px 20px 20px 20px;
+}
+#section__jugadores div div img {
+  width: 50%;
+  height: 280px;
+}
+#section__jugadores div div p {
+  color: white;
+  margin-left: 50px;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+  #section__jugadores {
+    width: 100%;
+    height: 1200px;
+  }
+  #section__jugadores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+  }
+  #section__jugadores div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section__jugadores div div img {
+    width: 100%;
+    height: 320px;
+  }
+  #section__jugadores div div p {
+    color: white;
+    margin-left: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #section__jugadores {
+    width: 100%;
+    height: 1300px;
+  }
+  #section__jugadores div {
+    padding: 20px 20px 20px 20px;
+  }
+  #section__jugadores div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section__jugadores div div img {
+    width: 80%;
+    height: 280px;
+  }
+  #section__jugadores div div p {
+    color: white;
+    margin-left: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #section__jugadores {
+    width: 100%;
+    height: 1200px;
+  }
+  #section__jugadores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px 20px 20px;
+  }
+  #section__jugadores div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #section__jugadores div div img {
+    width: 80%;
+    height: 280px;
+  }
+  #section__jugadores div div p {
+    color: white;
+    margin-left: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 9px;
+  }
+}
+.bg__partidos {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-partidos.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__partidos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__partidos div h1 {
+  font-size: 600%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .bg__partidos {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-partidosmb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__partidos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__partidos div h1 {
+    font-size: 600%;
+    font-family: "Josefin Sans", sans-serif;
+    color: #D2A353;
+  }
+}
+.section__partidos1 {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/argentinavmexico.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section__partidos1 h2 {
+  color: white;
+}
+.section__partidos1 h3 {
+  color: #D2A353;
+}
+
+.section__partidos2 {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/argentina-y-polonia.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section__partidos2 h2 {
+  color: white;
+}
+.section__partidos2 h3 {
+  color: #D2A353;
+}
+
+.bg__sponsors {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-sponsors.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__sponsors div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bg__sponsors div h1 {
+  font-size: 600%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #D2A353;
+}
+
+@media screen and (max-width: 991px) {
+  .bg__sponsors {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/bg-sponsorsmb.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__sponsors div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .bg__sponsors div h1 {
+    font-size: 600%;
+    font-family: "Josefin Sans", sans-serif;
+    color: #D2A353;
+  }
+}
+#section__sponsors {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.7), rgba(5, 7, 12, 0.7)), url(../images/fondo-afa.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#section__sponsors img {
+  border-top: solid 4px #D2A353;
+  border-bottom: solid 4px #D2A353;
+  border-left: solid 4px #D2A353;
+  border-right: solid 4px #D2A353;
+}
+
+/*# sourceMappingURL=style.css.map */

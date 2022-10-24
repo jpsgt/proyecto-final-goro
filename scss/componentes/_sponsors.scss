@@ -1,0 +1,64 @@
+.bg__sponsors{
+    width: 100%;
+    height: 100vh;
+    background-image:
+    linear-gradient(rgba(5, 7, 12, 0.70), rgba(5, 7, 12, 0.70)),
+    url(../images/bg-sponsors.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include center-flex();
+    div{
+        @include center-flex();
+
+        h1{
+            font-size: 600%;
+            font-family: $txt-titulos;
+            color: $c-hover-header;
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+    .bg__sponsors{
+        width: 100%;
+        height: 100vh;
+        background-image:
+        linear-gradient(rgba(5, 7, 12, 0.70), rgba(5, 7, 12, 0.70)),
+        url(../images/bg-sponsorsmb.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        @include center-flex();
+        div{
+            @include center-flex();
+    
+            h1{
+                font-size: 600%;
+                font-family: $txt-titulos;
+                color: $c-hover-header;
+            }
+        }
+    }
+}
+
+#section__sponsors{
+    width: 100%;
+    height: 900px;
+    @include center-flex();
+    background-image:
+    linear-gradient(rgba(5, 7, 12, 0.70), rgba(5, 7, 12, 0.70)),
+    url(../images/fondo-afa.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img{
+        @include bordes-dorados();
+    }
+}
