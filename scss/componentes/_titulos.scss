@@ -38,7 +38,7 @@
             @include center-flex();
     
             h1{
-                font-size: 600%;
+                font-size: 300%;
                 font-family: $txt-titulos;
                 color: $c-hover-header;
             }
@@ -47,71 +47,79 @@
 }
 
 #section__titulos{
-    width: 100%;
-    height: 800px;
-    @include center-flex();
-    background-image:
-    linear-gradient(rgba(5, 7, 12, 0.80), rgba(5, 7, 12, 0.80)),
-    url(../images/fondo-afa.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    @include bordes-dorados();
     div{
-        div{
-            div{
-                @include center-flex();
-                div{
-                    margin: 10px 10px 10px 10px;
-                    img{
-                        width: 100%;
-                        height: 200px;
-                    }
+        padding: 20px 20px 20px 20px;
+        img{
+            @include bordes-dorados();
+            width: 50%;
+            height: 400px;
+        }
 
-                    div{
-                        p{
-                            color: $c-hover-header;
-                            font-family: $txt-titulos;
-                        }
-                    }
+        div{
+            width: 50%;
+            height: 400px;
+            @include center-flex();
+            font-weight: bold;
+            p{
+                @include bordes-dorados();
+                border-radius: 5px;
+                padding: 10px 10px 10px 10px;
+                font-family: $txt-textos;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #section__titulos{
+        @include bordes-dorados();
+        div{
+            padding: 20px 20px 20px 20px;
+            img{
+                @include bordes-dorados();
+                width: 100%;
+                height: 400px;
+            }
+    
+            div{
+                width: 100%;
+                height: 150px;
+                @include center-flex();
+                font-weight: bold;
+                p{
+                    @include bordes-dorados();
+                    border-radius: 5px;
+                    padding: 10px 10px 10px 10px;
+                    font-family: $txt-textos;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 360px){
     #section__titulos{
-        width: 100%;
-        height: 900px;
-        @include center-flex();
-        background-image:
-        linear-gradient(rgba(5, 7, 12, 0.80), rgba(5, 7, 12, 0.80)),
-        url(../images/fondo-afa.jpg);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    
+        @include bordes-dorados();
         div{
-            div{
-                div{
-                    @include center-flex();
-                    div{
-                        margin: 10px 10px 10px 10px;
-                        img{
-                            width: 100%;
-                            height: 200px;
-                        }
+            padding: 20px 20px 20px 20px;
+            img{
+                @include bordes-dorados();
+                width: 100%;
+                height: 400px;
+            }
     
-                        div{
-                            p{
-                                color: $c-hover-header;
-                                font-family: $txt-titulos;
-                            }
-                        }
-                    }
+            div{
+                width: 100%;
+                height: 150px;
+                @include center-flex();
+                font-weight: bold;
+                p{
+                    @include bordes-dorados();
+                    border-radius: 5px;
+                    padding: 10px 10px 10px 10px;
+                    font-family: $txt-textos;
+                    font-size: 10px;
                 }
             }
         }

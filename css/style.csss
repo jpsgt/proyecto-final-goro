@@ -41,7 +41,6 @@
 }
 .header__index nav #nav__a a:hover {
   color: #D2A353;
-  transform: scale(1.2);
 }
 
 .btn-menu label {
@@ -206,7 +205,6 @@
 }
 .header__pages nav #nav__a a:hover {
   color: black;
-  transform: scale(1.2);
 }
 
 .btn-menu-pages label {
@@ -655,44 +653,6 @@
     font-family: "Quicksand", sans-serif;
   }
 }
-@media screen and (max-width: 360px) {
-  #section__titulos {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-  }
-  #section__titulos div {
-    padding: 20px 20px 20px 20px;
-  }
-  #section__titulos div img {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    width: 100%;
-    height: 400px;
-  }
-  #section__titulos div div {
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-  #section__titulos div div p {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px;
-    font-family: "Quicksand", sans-serif;
-    font-size: 10px;
-  }
-}
 .bg__noticias {
   width: 100%;
   height: 100vh;
@@ -713,7 +673,7 @@
   justify-content: center;
 }
 .bg__noticias div h1 {
-  font-size: 600%;
+  font-size: 300%;
   font-family: "Josefin Sans", sans-serif;
   color: #D2A353;
 }
@@ -739,83 +699,11 @@
     justify-content: center;
   }
   .bg__noticias div h1 {
-    font-size: 300%;
+    font-size: 600%;
     font-family: "Josefin Sans", sans-serif;
     color: #D2A353;
   }
 }
-#section__noticias .n1 {
-  border-top: solid 4px #D2A353;
-  border-bottom: solid 4px #D2A353;
-  border-left: solid 4px #D2A353;
-  border-right: solid 4px #D2A353;
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)), url(../images/bg-n1.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px 10px 10px;
-}
-#section__noticias .n1 h2 {
-  color: #D2A353;
-  padding: 10px 10px 10px 10px;
-  font-family: "Quicksand", sans-serif;
-}
-#section__noticias .n2 {
-  border-top: solid 4px #D2A353;
-  border-bottom: solid 4px #D2A353;
-  border-left: solid 4px #D2A353;
-  border-right: solid 4px #D2A353;
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)), url(../images/bg-n2.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px 10px 10px;
-}
-#section__noticias .n2 h2 {
-  border-radius: 5px;
-  color: #D2A353;
-  padding: 10px 10px 10px 10px;
-  font-family: "Quicksand", sans-serif;
-}
-#section__noticias .n3 {
-  border-top: solid 4px #D2A353;
-  border-bottom: solid 4px #D2A353;
-  border-left: solid 4px #D2A353;
-  border-right: solid 4px #D2A353;
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)), url(../images/bg-n3.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 10px 10px 10px;
-}
-#section__noticias .n3 h2 {
-  border-radius: 5px;
-  color: #D2A353;
-  padding: 10px 10px 10px 10px;
-  font-family: "Quicksand", sans-serif;
-}
-
 .bg__jugadores {
   width: 100%;
   height: 100vh;
@@ -867,210 +755,13 @@
     color: #D2A353;
   }
 }
-#section__jugadores {
-  border-top: solid 4px #D2A353;
-  border-bottom: solid 4px #D2A353;
-  border-left: solid 4px #D2A353;
-  border-right: solid 4px #D2A353;
+#section__jugadores div div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 50px 50px 50px;
-}
-#section__jugadores div {
-  width: 1140px;
-}
-#section__jugadores div div div {
-  width: 16.5rem;
-  margin: 10px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
-  border-top: solid 1px #D2A353;
-  border-bottom: solid 1px #D2A353;
-  border-left: solid 1px #D2A353;
-  border-right: solid 1px #D2A353;
-}
-#section__jugadores div div div:hover {
-  transform: scale(1.1);
-}
-#section__jugadores div div div img {
-  width: 240px;
-  height: 180px;
-  border-radius: 5px;
-  border-top: solid 4px #D2A353;
-  border-bottom: solid 4px #D2A353;
-  border-left: solid 4px #D2A353;
-  border-right: solid 4px #D2A353;
-}
-#section__jugadores div div div div {
-  width: 215px;
-  height: 90px;
-  border-radius: 5px;
-}
-#section__jugadores div div div div h2 {
-  color: #D2A353;
-  font-family: "Josefin Sans", sans-serif;
 }
 
-@media screen and (max-width: 1240px) {
-  #section__jugadores {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #section__jugadores div {
-    width: 876px;
-  }
-  #section__jugadores div div div {
-    width: 17rem;
-    margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-  }
-  #section__jugadores div div div img {
-    width: 240px;
-    height: 180px;
-    border-radius: 5px;
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-  }
-  #section__jugadores div div div div {
-    width: 215px;
-    height: 85px;
-    border-radius: 5px;
-  }
-  #section__jugadores div div div div h2 {
-    color: #D2A353;
-    font-family: "Josefin Sans", sans-serif;
-  }
-}
-@media screen and (max-width: 992px) {
-  #section__jugadores {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #section__jugadores div {
-    width: 616px;
-  }
-  #section__jugadores div div div {
-    width: 18rem;
-    margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-  }
-  #section__jugadores div div div img {
-    width: 240px;
-    height: 180px;
-    border-radius: 5px;
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-  }
-  #section__jugadores div div div div {
-    width: 215px;
-    height: 85px;
-    border-radius: 5px;
-  }
-  #section__jugadores div div div div h2 {
-    color: #D2A353;
-    font-family: "Josefin Sans", sans-serif;
-  }
-}
-@media screen and (max-width: 768px) {
-  #section__jugadores {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #section__jugadores div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  #section__jugadores div div div {
-    width: 18rem;
-    margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-  }
-  #section__jugadores div div div img {
-    width: 240px;
-    height: 180px;
-    border-radius: 5px;
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-  }
-  #section__jugadores div div div div {
-    width: 215px;
-    height: 85px;
-    border-radius: 5px;
-  }
-  #section__jugadores div div div div h2 {
-    color: #D2A353;
-    font-family: "Josefin Sans", sans-serif;
-  }
-}
-@media screen and (max-width: 360px) {
-  #section__jugadores {
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #section__jugadores div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  #section__jugadores div div div {
-    width: 14rem;
-    padding: 10px 10px 10px 10px;
-  }
-  #section__jugadores div div div img {
-    width: 100%;
-    height: 180px;
-    border-radius: 5px;
-    border-top: solid 4px #D2A353;
-    border-bottom: solid 4px #D2A353;
-    border-left: solid 4px #D2A353;
-    border-right: solid 4px #D2A353;
-  }
-  #section__jugadores div div div div {
-    width: 215px;
-    height: 85px;
-    border-radius: 5px;
-  }
-  #section__jugadores div div div div h2 {
-    color: #D2A353;
-    font-family: "Josefin Sans", sans-serif;
-  }
-}
 .bg__partidos {
   width: 100%;
   height: 100vh;
@@ -1215,4 +906,4 @@
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.csss.map */

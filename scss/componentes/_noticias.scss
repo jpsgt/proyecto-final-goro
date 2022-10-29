@@ -38,10 +38,72 @@
             @include center-flex();
     
             h1{
-                font-size: 600%;
+                font-size: 300%;
                 font-family: $txt-titulos;
                 color: $c-hover-header;
             }
+        }
+    }
+}
+
+#section__noticias{
+    .n1{
+        @include bordes-dorados();
+        width: 100%;
+        height: 100vh;
+        background-image:
+        linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)),
+        url(../images/bg-n1.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include center-flex();
+        padding: 10px 10px 10px 10px;
+        h2{
+            color: $c-hover-header;
+            padding: 10px 10px 10px 10px;
+            font-family: $txt-textos;
+        }
+    }
+    .n2{
+        @include bordes-dorados();
+        width: 100%;
+        height: 100vh;
+        background-image:
+        linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)),
+        url(../images/bg-n2.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include center-flex();
+        padding: 10px 10px 10px 10px;
+        h2{
+            border-radius: 5px;
+            color: $c-hover-header;
+            padding: 10px 10px 10px 10px;
+            font-family: $txt-textos;
+        }
+    }
+    .n3{
+        @include bordes-dorados();
+        width: 100%;
+        height: 100vh;
+        background-image:
+        linear-gradient(rgba(5, 7, 12, 0.85), rgba(5, 7, 12, 0.85)),
+        url(../images/bg-n3.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include center-flex();
+        padding: 10px 10px 10px 10px;
+        h2{
+            border-radius: 5px;
+            color: $c-hover-header;
+            padding: 10px 10px 10px 10px;
+            font-family: $txt-textos;
         }
     }
 }

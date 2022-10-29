@@ -47,6 +47,7 @@
 
                 &:hover{
                     color: $c-hover-header;
+                    transform: scale(1.2);
                 }
             }
         }
@@ -225,6 +226,7 @@
 
                 &:hover{
                     color: black;
+                    transform: scale(1.2);
                 }
             }
         }
